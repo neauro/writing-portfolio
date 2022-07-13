@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="blog post">
+  <div class="header">
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.date | date_to_string }}</p>
+  </div>
+
+  {{ content }}
+
+  <div class="footer">
+    <p>
+      Tags: 
+        {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a class="tag" href="/tag/{{ tag_name }}">{{ tag_name }}</a>
+        {% endfor %}
+    </p>
+    <div class="breadcrumb"><a href="/blog">◄ Back to blog</a></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,400i,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% feed_meta %}
+  {% seo %}
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
+  </head>
+
+  <body>
+    <div class="content">
+      <img class="rainslice" src="/assets/images/rainslice.png"/>
+      {% include navigation.html %}
+      {{ content }}
+      <hr/>
+      <footer>
+      <div class="avatar"><Div class="circle"></div></div>
+      <div class="bio">
+        <p>
+          Nadine (she/they) is a speculative fiction writer, designer, artist, and shiba inu enthusiast who lives in the Pacific Northwest with her dog, Ichika. That's it!
+        </p>
+        <p>
+          This website uses Maragsâ Display by John David Maza.
+        </p>
+      </div>
+      </footer>
+    </div>
+  </body>
+</html>
